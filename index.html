@@ -1,23 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
     <title>ICH - Calcular IMC</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <header>
+      <header>
+        <div class="logo">ICH</div>
+      </header>
 
-        </header>
+      <main>
+        <h1>ICH - calculando o seu imc</h1>
+        <div class="conteudo">
+          <section class="userInfo">
+            <label for="nome">
+              <input
+                type="text"
+                name="name"
+                id="nome"
+                placeholder="Digite aqui o seu nome"
+              />
+            </label>
+            <label for="altura">
+              <input
+                type="number"
+                name="altura"
+                id="altura"
+                placeholder="Digite aqui a sua altura, em metros - Ex: 1.70"
+              />
+            </label>
+            <label for="peso">
+              <input
+                type="number"
+                name="peso"
+                id="peso"
+                placeholder="Digite aqui o seu peso, em quilogramas - EX: 70"
+              />
+            </label>
+          </section>
 
-        <main>
-            
-        </main>
+          <section class="resultado">
+            <div class="res"></div>
+          </section>
+        </div>
+      </main>
 
-        <footer>
-            
-        </footer>
+      <footer>
+        <div class="rede-socias">
+            <h4>Github</h4>
+            <h4>Facebook</h4>
+            <h4>Insagram</h4>
+            <h4>Linkedin</h4>
+        </div>
+        <div class="criador">
+            <p>
+                <span>ICH</span> criado por - Aurélio Capingana
+            </p>
+        </div>
+      </footer>
     </div>
-</body>
+
+    <script src="/assets/js.script.js"></script>
+  </body>
 </html>
