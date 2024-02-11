@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
   --cor1: #d2e3c8;
   --cor2: #86a789;
@@ -10,6 +12,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
 }
 html {
     height: 100%;
@@ -21,8 +24,97 @@ body {
   flex-direction: column;
   min-height: 100%;
 }
+.container {
+    background-color: #fff;
+    width: 600px;
+    height: 100vh;
+    margin: auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0.5px 10px var(--cor2);
+}
+header {
+    margin-top: 1rem;
+    font-size: xx-large;
+    color: var(--cor4);
+    font-weight: 900;
+}
+main {
+    display: flex;
+    flex-direction: column;
+}
+main h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 40px;
+    font-variant: small-caps;
+    color: var(--cor4);
+}
+main .conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+main .conteudo .userInfo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    padding: 0.5rem;
+}
+main .conteudo .userInfo  input {
+    width: 80%;
+    margin-left: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+}
+main .conteudo .resultado {
+    display: flex;
+    flex-direction: column;
+}
+main .conteudo .resultado .res {
+    border: 1px solid var(--cor2);
+    width: 80%;
+    height: 150px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+main .conteudo .resultado span {
+    font-size: 14px;
+}
+main button {
+    margin: 2.5rem 0;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: var(--cor1);
+    font-weight: 600;
+    font-size: 20px;
+}
+main button:hover {
+    color: var(--cor1);
+    background-color: var(--cor4);
+}
 footer {
+    width: 100%;
+    height: 50px;
+    /* background-color: red; */
     margin-top: auto;
+    display: flex;
+    padding: 10px 0 ;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--cor4);
+    gap: 10px;
+}
+footer .rede-socias {
+    display: flex;
+    gap: 20px;
 }
 
 
