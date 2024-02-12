@@ -1,18 +1,57 @@
-/*Crie uma função que calcule o índice de massa corporal (IMC) de uma pessoa, a partir de sua altura, em metros, e peso, em quilogramas, que serão recebidos como parâmetro.*/
-let peso = Number(prompt('Digite o seu peso : '))
-let altura = Number(prompt('Digite sua altura : '))
-let imc 
+let nome
+let altura
+let peso
+let imc
 
-const calcularImc = (peso, altura) => {
-    return peso / altura**2
+const calcularImc =  () => {
+    nome = document.querySelector('#nome').value
+    altura = document.querySelector('#altura').value
+    peso = document.querySelector('#peso').value
+    
+    
+    if (nome == '' || altura == '' || peso == '') {
+        console.log('Preencha os campos acima, por favor')
+    }
+    else if (altura == 0 || peso == 0) {
+        console.log('preencha os campos com informaçoes certas')
+    }
+    else {
+        imc = (peso / (altura * altura)).toFixed(2)
+
+        if (imc < 18.5) {
+            console.log(`O seu IMC é ${imc}, Esta a baixo do normal, procure um medico`)
+            limpaCampo()
+        }
+        else if (imc == 18.5 || 24.9 >= imc) {
+            console.log(`O seu IMC é ${imc}, Parabés seu peso esta normal`)
+            limpaCampo()
+        }
+        else if (imc < 25.0 || 29.9 >= imc) {
+            console.log(`O seu IMC é ${imc}, Esta no Sobrepeso`)
+            limpaCampo()
+        }
+        else if (imc < 30.0 || 34.9 >= imc) {
+            console.log(`O seu IMC é ${imc}, Esta no Obesidade grau I, cuide mais da sua saude`)
+            limpaCampo()
+        }
+        else if (imc < 35.0 || 39.9 >= imc) {
+            console.log(`O seu IMC é ${imc}, Esta no Obesidade grau II, sua saúde pode esta em perigo`)
+        }
+        else{
+            // console.log(`O teu imc é ${imc}`)
+            if (imc > 40.0) {
+                console.log(`O seu IMC é ${imc}, Esta no SObesidade grau III, sua saude está em um estado delicado`)
+            }
+
+        }
+    
+    }
 }
-console.log(calcularImc(peso, altura))
-/*Crie uma função que calcule o valor do fatorial de um número passado como parâmetro.*/
 
-/*Crie uma função que converte um valor em dólar, passado como parâmetro, e retorna o valor equivalente em reais. Para isso, considere a cotação do dólar igual a R$4,80.*/
-
-/*Crie uma função que mostre na tela a área e o perímetro de uma sala retangular, utilizando altura e largura que serão dadas como parâmetro.*/
-
-/*Crie uma função que mostre na tela a área e o perímetro de uma sala circular, utilizando seu raio que será fornecido como parâmetro. Considere Pi = 3,14.*/
-
-/*Crie uma função que mostre na tela a tabuada de um número dado como parâmetro.*/
+const limpaCampo = () => {
+    return 
+    let nome = ''
+    let altura = ''
+    let peso = ''
+}
+// console.log(`Olá ${nome}, voce tem ${altura} de altura,  o teu peso é ${peso}`)

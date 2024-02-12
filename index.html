@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/assets/css/style.css" />
-    <title>ICH - Calcular IMC</title>
+    <link rel="shortcut icon" href="assets/favicon_io (1)/favicon.ico" type="image/x-icon">
+    <title>ICH</title>
   </head>
   <body>
     <div class="container">
@@ -15,24 +16,18 @@
       <main>
         <h1>calcula o seu imc</h1>
         <div class="conteudo">
-          <section class="userInfo">
-            <label for="nome"> Nome:
-              <input
+          <form class="userInfo">
+            <label for="nome">
+              Nome:
+              <input class="usernome"
                 type="text"
                 name="name"
                 id="nome"
                 placeholder="Digite aqui o seu nome"
               />
-            </label> 
-            <label for="altura"> Altura:
-              <input
-                type="number"
-                name="altura"
-                id="altura"
-                placeholder="Digite aqui a sua altura, em metros - Ex: 1.70"
-              />
             </label>
-            <label for="peso"> Peso:
+            <label for="peso">
+              Peso:
               <input
                 type="number"
                 name="peso"
@@ -40,7 +35,16 @@
                 placeholder="Digite aqui o seu peso, em quilogramas - EX: 70"
               />
             </label>
-          </section>
+            <label for="altura">
+              Altura:
+              <input
+                type="number"
+                name="altura"
+                id="altura"
+                placeholder="Digite aqui a sua altura, em metros - Ex: 1.70"
+              />
+            </label>
+          </form>
 
           <section class="resultado">
             <div class="res"></div>
@@ -48,24 +52,43 @@
           </section>
         </div>
 
-        <button class="imc">Ver Imc</button>
+        <input type="submit" id="send" onclick="calcularImc()" value="Enviar">
+        <!-- <button onclick="calcularImc()">Ver Imc</button> -->
       </main>
 
       <footer>
         <div class="rede-socias">
-            <h4>Github</h4>
-            <h4>Facebook</h4>
-            <h4>Insagram</h4>
-            <h4>Linkedin</h4>
+          <h4>
+            <a href="https://github.com/aureliocapingana01" target="_blank"
+              >Github</a
+            >
+          </h4>
+          <h4>
+            <a
+              href="https://www.facebook.com/aureliocapingano.manguena"
+              target="_blank"
+              >Facebook</a
+            >
+          </h4>
+          <h4>
+            <a href="https://www.instagram.com/?theme=dark" target="_blank"
+              >Intagram</a
+            >
+          </h4>
+          <h4>
+            <a
+              href="https://www.linkedin.com/in/aur%C3%A9lio-capingana-6777691b6/"
+              target="_blank"
+              >Linkedin</a
+            >
+          </h4>
         </div>
         <div class="criador">
-            <p>
-                <span>ICH</span> criado por - Aurélio Capingana
-            </p>
+          <p><span>ICH</span> criado por - Aurélio Capingana</p>
         </div>
       </footer>
     </div>
 
-    <!-- <script src="/assets/js.script.js"></script> -->
+    <script src="/assets/js.script.js" defer></script>
   </body>
 </html>

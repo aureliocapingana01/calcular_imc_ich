@@ -64,7 +64,7 @@ main .conteudo .userInfo {
     padding: 0.5rem;
 }
 main .conteudo .userInfo  input {
-    width: 80%;
+    width: 90%;
     margin-left: 5px;
     padding: 5px;
     border-radius: 5px;
@@ -78,7 +78,7 @@ main .conteudo .resultado {
 }
 main .conteudo .resultado .res {
     border: 1px solid var(--cor2);
-    width: 80%;
+    width: 100%;
     height: 150px;
     margin-bottom: 10px;
     padding: 10px;
@@ -86,7 +86,7 @@ main .conteudo .resultado .res {
 main .conteudo .resultado span {
     font-size: 14px;
 }
-main button {
+main #send {
     margin: 2.5rem 0;
     padding: 10px;
     border-radius: 5px;
@@ -96,7 +96,7 @@ main button {
     font-weight: 600;
     font-size: 20px;
 }
-main button:hover {
+main #send:hover {
     color: var(--cor1);
     background-color: var(--cor4);
 }
@@ -115,6 +115,10 @@ footer {
 footer .rede-socias {
     display: flex;
     gap: 20px;
+}
+footer .rede-socias a{
+   text-decoration: none;
+   color: var(--cor4);
 }
 
 
